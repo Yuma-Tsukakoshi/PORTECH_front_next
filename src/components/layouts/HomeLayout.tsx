@@ -28,16 +28,16 @@ type MainLayoutProps = {
 };
 
 
-const HomeLayout: FC<MainLayoutProps> = ({ children }) => {
-  return (
-    <>
-      <Header children={undefined} height={''} {...{ tabs }} />
-      <Container className="pt-5 pb-10">
-        <Stack spacing="xl">{children}</Stack>
-      </Container>
-      {/* <Footer /> */}
-    </>
-  );
-}
+// const HomeLayout: FC<MainLayoutProps> = ({ children }) => {
+//   return (
+//     <>
+//       <Header children={undefined} height={''} {...{ tabs }} />
+//       <Container className="pt-5 pb-10">
+//         <Stack spacing="xl">{children}</Stack>
+//       </Container>
+//       {/* <Footer /> */}
+//     </>
+//   );
+// }
 
-export default HomeLayout;
+// export default HomeLayout;

@@ -14,6 +14,7 @@
     "@mantine/dates": "^6.0.19",
     "@mantine/ds": "^6.0.19",
     "@mantine/hooks": "^6.0.19",
+    "@notionhq/client": "^2.2.11",
     "@tabler/icons-react": "^2.30.0",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",

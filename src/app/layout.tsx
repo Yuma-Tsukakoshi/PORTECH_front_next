@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 const tabs = [
   {
-    link: 'home',
+    link: '/',
     label: 'HOME',
   },
   {

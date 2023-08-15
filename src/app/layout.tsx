@@ -20,8 +20,8 @@ const tabs = [
     label: 'Tips',
   },
   {
-    link: 'techfinder',
-    label: 'TechFinder',
+    link: 'techfind',
+    label: 'TechFind',
   },
 ];
 

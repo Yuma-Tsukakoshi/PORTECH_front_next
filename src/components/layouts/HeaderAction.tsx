@@ -28,6 +28,7 @@ import {
 } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 import React from 'react';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -94,28 +95,33 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface HeaderTabsProps {
-  // user: { name: string; image: string };
-  tabs: string[];
-}
-
-// type HeaderActionProps = {
+// interface HeaderTabsProps {
+//   // user: { name: string; image: string };
 //   tabs: {
 //     label: string;
 //     link: string;
 //   }[];
-// };
+// }
 
-const HeaderAction = ({ tabs }: HeaderTabsProps) => {
+type HeaderActionProps = {
+  tabs: {
+    label: string;
+    link: string;
+  }[];
+};
+
+const HeaderAction = ({ tabs }: HeaderActionProps) => {
   const { classes, theme, cx } = useStyles();
   const [opened, { toggle }] = useDisclosure(false);
   const [userMenuOpened, setUserMenuOpened] = useState(false);
 
-  // const items = tabs.map((tab) => (
-  //   <Tabs.Tab value={tab} key={tab}>
-  //     {tab}
-  //   </Tabs.Tab>
-  // ));
+  const items = tabs.map((tab) => (
+    <Tabs.Tab value={tab.link} key={tab.label}>
+      <Link href={tab.link} >
+        {tab.label}
+      </Link>
+    </Tabs.Tab>
+  ));
 
   return (
     <>
@@ -147,40 +153,39 @@ const HeaderAction = ({ tabs }: HeaderTabsProps) => {
                   </Group>
                 </UnstyledButton>
               </Menu.Target>
+              {/* ログインユーザーの詳細表示 */}
               <Menu.Dropdown>
                 <Menu.Item
                   icon={<IconHeart size="0.9rem" color={theme.colors.red[6]} stroke={1.5} />}
                 >
-                  Liked posts
+                  いいねした記事
                 </Menu.Item>
                 <Menu.Item
                   icon={<IconStar size="0.9rem" color={theme.colors.yellow[6]} stroke={1.5} />}
                 >
-                  Saved posts
+                  ブックマークした記事
                 </Menu.Item>
                 <Menu.Item
                   icon={<IconMessage size="0.9rem" color={theme.colors.blue[6]} stroke={1.5} />}
                 >
-                  Your comments
+                  コメントした記事
                 </Menu.Item>
   
-                <Menu.Label>Settings</Menu.Label>
+                <Menu.Label>設定</Menu.Label>
                 <Menu.Item icon={<IconSettings size="0.9rem" stroke={1.5} />}>
-                  Account settings
+                  アカウントの設定
                 </Menu.Item>
-                <Menu.Item icon={<IconSwitchHorizontal size="0.9rem" stroke={1.5} />}>
-                  Change account
+                <Menu.Item icon={<IconLogout size="0.9rem" stroke={1.5} />}>
+                  ログアウト
                 </Menu.Item>
-                <Menu.Item icon={<IconLogout size="0.9rem" stroke={1.5} />}>Logout</Menu.Item>
   
                 <Menu.Divider />
-  
-                <Menu.Label>Danger zone</Menu.Label>
+{/* 
                 <Menu.Item icon={<IconPlayerPause size="0.9rem" stroke={1.5} />}>
                   Pause subscription
-                </Menu.Item>
+                </Menu.Item> */}
                 <Menu.Item color="red" icon={<IconTrash size="0.9rem" stroke={1.5} />}>
-                  Delete account
+                  アカウントの削除
                 </Menu.Item>
               </Menu.Dropdown>
             </Menu>
@@ -196,7 +201,7 @@ const HeaderAction = ({ tabs }: HeaderTabsProps) => {
               tab: classes.tab,
             }}
           >
-            {/* <Tabs.List>{items}</Tabs.List> */}
+            <Tabs.List>{items}</Tabs.List>
           </Tabs>
         </Container>
       </div>

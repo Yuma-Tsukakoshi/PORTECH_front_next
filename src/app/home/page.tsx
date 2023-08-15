@@ -1,11 +1,7 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
 export default function Home() {
   return (
-    <>
-      <h1>lp page!</h1>
-      <Link href="/portfolio">POtへ</Link>
-    </>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <h1>Top page!</h1>
+    </main>
   )
 }

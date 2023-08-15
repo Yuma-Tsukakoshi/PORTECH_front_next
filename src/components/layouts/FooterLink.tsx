@@ -1,7 +1,7 @@
 "use client";
 
 import { createStyles, Container, Group, ActionIcon, rem } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
+import { IconBrandYoutubeFilled, IconBrandInstagram ,IconBrandGithubFilled } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
@@ -40,10 +40,10 @@ const FooterLink = () => {
         <MantineLogo size={28} />
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon size="lg">
-            <IconBrandTwitter size="1.05rem" stroke={1.5} />
+            <IconBrandYoutubeFilled size="1.05rem" stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandYoutube size="1.05rem" stroke={1.5} />
+            <IconBrandGithubFilled size="1.05rem" stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
             <IconBrandInstagram size="1.05rem" stroke={1.5} />

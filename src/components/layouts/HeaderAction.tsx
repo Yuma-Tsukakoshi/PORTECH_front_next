@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from 'react';
 import {
   createStyles,
@@ -93,20 +95,27 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface HeaderTabsProps {
-  user: { name: string; image: string };
+  // user: { name: string; image: string };
   tabs: string[];
 }
 
-export function HeaderTabs({ user, tabs }: HeaderTabsProps) {
+// type HeaderActionProps = {
+//   tabs: {
+//     label: string;
+//     link: string;
+//   }[];
+// };
+
+const HeaderAction = ({ tabs }: HeaderTabsProps) => {
   const { classes, theme, cx } = useStyles();
   const [opened, { toggle }] = useDisclosure(false);
   const [userMenuOpened, setUserMenuOpened] = useState(false);
 
-  const items = tabs.map((tab) => (
-    <Tabs.Tab value={tab} key={tab}>
-      {tab}
-    </Tabs.Tab>
-  ));
+  // const items = tabs.map((tab) => (
+  //   <Tabs.Tab value={tab} key={tab}>
+  //     {tab}
+  //   </Tabs.Tab>
+  // ));
 
   return (
     <>
@@ -130,10 +139,10 @@ export function HeaderTabs({ user, tabs }: HeaderTabsProps) {
                   className={cx(classes.user, { [classes.userActive]: userMenuOpened })}
                 >
                   <Group spacing={7}>
-                    <Avatar src={user.image} alt={user.name} radius="xl" size={20} />
+                    {/* <Avatar src={user.image} alt={user.name} radius="xl" size={20} />
                     <Text weight={500} size="sm" sx={{ lineHeight: 1 }} mr={3}>
                       {user.name}
-                    </Text>
+                    </Text> */}
                     <IconChevronDown size={rem(12)} stroke={1.5} />
                   </Group>
                 </UnstyledButton>
@@ -187,7 +196,7 @@ export function HeaderTabs({ user, tabs }: HeaderTabsProps) {
               tab: classes.tab,
             }}
           >
-            <Tabs.List>{items}</Tabs.List>
+            {/* <Tabs.List>{items}</Tabs.List> */}
           </Tabs>
         </Container>
       </div>
@@ -195,4 +204,4 @@ export function HeaderTabs({ user, tabs }: HeaderTabsProps) {
   );
 }
 
-export default Header;
+export default HeaderAction;

@@ -24,7 +24,7 @@ interface UserInfoIconsProps {
 export function UserInfoIcons({ avatar, name, title, phone, email }: UserInfoIconsProps) {
   const { classes } = useStyles();
   return (
-    <div>
+    <div className='flex  flex-col items-center justify-between p-2'>
       <Group noWrap>
         <Avatar src={avatar} size={94} radius="md" />
         <div>

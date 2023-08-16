@@ -3,6 +3,7 @@
 import { createStyles, Container, Group, ActionIcon, rem } from '@mantine/core';
 import { IconBrandYoutubeFilled, IconBrandInstagram ,IconBrandGithubFilled } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -40,7 +41,9 @@ const FooterLink = () => {
         <MantineLogo size={28} />
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon size="lg">
-            <IconBrandYoutubeFilled size="1.05rem" stroke={1.5} />
+            <Link href="https://www.youtube.com/" target= "_blank">
+              <IconBrandYoutubeFilled size="1.05rem" stroke={1.5} />
+            </Link>
           </ActionIcon>
           <ActionIcon size="lg">
             <IconBrandGithubFilled size="1.05rem" stroke={1.5} />

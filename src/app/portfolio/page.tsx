@@ -1,9 +1,15 @@
-import Image from 'next/image'
+import { UserInfoIcons } from '@/components/UserHeadLine';
+import { GridSkillsSection } from '@/components/UserSkills';
+import { GridIntroduceSection } from '@/components/UserIntroduce';
+import { ArticleCard } from '@/components/ArticleCard';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>portfolio page!</h1>
+    <main className="">
+      <UserInfoIcons />
+      <GridSkillsSection />
+      <GridIntroduceSection />  
+      <ArticleCard />
     </main>
   )
 }

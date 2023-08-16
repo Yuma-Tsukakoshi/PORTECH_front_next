@@ -1,11 +1,13 @@
 import { UserInfoIcons } from '@/components/UserHeadLine';
-import { GridAsymmetrical } from '@/components/UserSkills';
+import { GridSkillsSection } from '@/components/UserSkills';
+import { GridIntroduceSection } from '@/components/UserIntroduce';
 
 export default function Home() {
   return (
     <main className="">
       <UserInfoIcons />
-      <GridAsymmetrical />
+      <GridSkillsSection />
+      <GridIntroduceSection />  
     </main>
   )
 }

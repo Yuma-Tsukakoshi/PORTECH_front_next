@@ -1,6 +1,7 @@
 import { UserInfoIcons } from '@/components/UserHeadLine';
 import { GridSkillsSection } from '@/components/UserSkills';
 import { GridIntroduceSection } from '@/components/UserIntroduce';
+import { ArticleCard } from '@/components/ArticleCard';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <UserInfoIcons />
       <GridSkillsSection />
       <GridIntroduceSection />  
+      <ArticleCard />
     </main>
   )
 }

@@ -13,15 +13,11 @@ const tabs = [
   },
   {
     link: 'portfolio',
-    label: 'Portfolio',
+    label: 'MyBlog',
   },
   {
-    link: 'tips',
-    label: 'Tips',
-  },
-  {
-    link: 'techfind',
-    label: 'TechFind',
+    link: 'tech',
+    label: 'TechBlog',
   },
 ];
 

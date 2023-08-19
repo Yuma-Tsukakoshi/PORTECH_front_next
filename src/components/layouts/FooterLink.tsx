@@ -1,12 +1,12 @@
 "use client";
 
 import { createStyles, Container, Group, ActionIcon, rem } from '@mantine/core';
-import { IconBrandYoutubeFilled, IconBrandInstagram ,IconBrandGithubFilled } from '@tabler/icons-react';
-import { MantineLogo } from '@mantine/ds';
+import { IconBrandYoutubeFilled, IconBrandInstagram  } from '@tabler/icons-react';
+import { MantineLogo , GithubIcon} from '@mantine/ds';
 import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
-  footer: {
+  footer: { 
     marginTop: rem(120),
     borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
@@ -46,7 +46,7 @@ const FooterLink = () => {
             </Link>
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandGithubFilled size="1.05rem" stroke={1.5} />
+            <GithubIcon size={20} />
           </ActionIcon>
           <ActionIcon size="lg">
             <IconBrandInstagram size="1.05rem" stroke={1.5} />

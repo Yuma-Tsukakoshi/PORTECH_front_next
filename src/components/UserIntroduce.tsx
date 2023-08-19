@@ -1,23 +1,10 @@
 "use client";
 
-import { createStyles, Text, SimpleGrid, Container, rem } from '@mantine/core';
-import { IconMedal2, IconCertificate, IconCrown } from '@tabler/icons-react';
+import { createStyles, Text, SimpleGrid, Container, rem , Center} from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   feature: {
     position: 'relative',
-    paddingTop: theme.spacing.xl,
-    paddingLeft: theme.spacing.xl,
-  },
-
-  overlay: {
-    position: 'absolute',
-    height: rem(100),
-    width: rem(160),
-    top: 0,
-    left: 0,
-    backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
-    zIndex: 1,
   },
 
   content: {
@@ -25,31 +12,30 @@ const useStyles = createStyles((theme) => ({
     zIndex: 2,
   },
 
-  icon: {
-    color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
-  },
-
   title: {
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    height: '2.5rem',
+    backgroundImage: theme.fn.gradient(),
+    color: theme.white,
+    borderRadius: rem(14),
+    padding: rem(7),
+    textAlign: 'center',
+    width: '50%',
+    transform: 'translateX(50%)',
   },
 }));
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<'div'> {
-  icon: React.FC<any>;
   title: string;
   description: string;
 }
 
-function Feature({ icon: Icon, title, description, className, ...others }: FeatureProps) {
+function Feature({ title, description, className, ...others }: FeatureProps) {
   const { classes, cx } = useStyles();
 
   return (
     <div className={cx(classes.feature, className)} {...others}>
-      <div className={classes.overlay} />
-
       <div className={classes.content}>
-        <Icon size={rem(38)} className={classes.icon} stroke={1.5} />
-        <Text fw={700} fz="lg" mb="xs" mt={5} className={classes.title}>
+        <Text fw={700} fz="xm" mb="xs" mt={5} className={classes.title}>
           {title}
         </Text>
         <Text c="dimmed" fz="sm">
@@ -62,41 +48,37 @@ function Feature({ icon: Icon, title, description, className, ...others }: Featu
 
 //propsでログインユーザーのものを表示する
 // 他に、ログイン以外の人は別のページにする あくまでこのページにはログインユーザーのみ
-
 const usergoal = [
     {
-    icon: IconCrown,
     title: '今後の目標 【 展望 】',
     description:
-      'Thought to have gone extinct, Relicanth was given a name that is a variation of the name of the person who discovered.',
+      'Thought to have gone extinct, Relicanth was given a name that is a variation of the name of the person who discovered.Thought to have gone extinct, Relicanth was given a name that is a variation of the name of the person who discovered.Thought to have gone extinct, Relicanth was given a name that is a variation of the name of the person who discovered.',
   },
 ]
 
 const identity = [
   {
-    icon: IconMedal2,
-    title: '活かしていきたいこと【 強み 】',
+    title: '活かしたいこと【 強み 】',
     description:
-      'As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity.',
+      'As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity. As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity.As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity.',
   },
   {
-    icon: IconCertificate,
     title: '克服したいこと【 弱み 】',
     description:
-      'Slakoth’s heart beats just once a minute. Whatever happens, it is content to loaf around motionless.',
+      'Slakoth’s heart beats just once a minute. Whatever happens, it is content to loaf around motionless.As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity.As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity.',
   },
 ];
 
 export function GridIntroduceSection() {
-  const goal = usergoal.map((item) => <Feature {...item} key={item.title} />);
-  const items = identity.map((item) => <Feature {...item} key={item.title} />);
+  const goal = usergoal.map((item) => <Feature {...item} key={item.title} className="drop-shadow-lg" />);
+  const items = identity.map((item) => <Feature {...item} key={item.title} className="mx-1 bg-white p-8 pt-4 rounded-2xl drop-shadow-lg " />);
 
   return (
-    <Container mt={30} mb={30} size="lg">
-      <SimpleGrid cols={1} breakpoints={[{ maxWidth: 'sm', cols: 1 }]} spacing={50} className = "m-10">
+    <Container my="md" size="lg" className='mx-auto my-10 max-w-62rem'>
+      <SimpleGrid cols={1} breakpoints={[{ maxWidth: 'sm', cols: 1 }]} spacing={50} className = "p-8 pt-4 bg-white rounded-2xl my-10 drop-shadow-lg ">
         {goal}
       </SimpleGrid>
-      <SimpleGrid cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1 }]} spacing={50}>
+      <SimpleGrid cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1 }]} spacing={10} className="text-xm">
         {items}
       </SimpleGrid>
     </Container>

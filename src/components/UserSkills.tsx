@@ -26,15 +26,15 @@ export function GridSkillsSection() {
   },[]);
 
   return (
-    <Container my="md" className="bg-white p-8 pt-2 rounded-2xl">
+    <Container my="md" className="bg-white p-8 pt-2 rounded-2xl drop-shadow-lg">
       <Center sx={(theme) => ({
             height: '2.5rem',
             backgroundImage: theme.fn.gradient(),
             color: theme.white,
-          })} className="rounded-xl w-1/2 font-bold transform translate-x-1/2 drop-shadow-lg my-4">
+          })} className="rounded-xl w-1/2 font-bold transform translate-x-1/2 drop-shadow-lg my-5 mb-10">
           My Skills
       </Center>
-      <Grid className="gap-1 flex justify-between">
+      <Grid className="gap-1 flex  justify-between">
           {/* ゆくゆくはプロフィールから自分が選んだものだけ（idとかでstate維持） */}
           {skills.slice(0,14).map((skill : Skill)=>{
             return (

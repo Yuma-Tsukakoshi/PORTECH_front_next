@@ -83,6 +83,7 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 500,
     height: rem(38),
     backgroundColor: 'transparent',
+    fontSize: '1rem',
 
     '&:hover': {
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
@@ -178,12 +179,9 @@ const HeaderAction = ({ tabs }: HeaderActionProps) => {
                 <Menu.Item icon={<IconLogout size="0.9rem" stroke={1.5} />}>
                   ログアウト
                 </Menu.Item>
-  
+
                 <Menu.Divider />
-{/* 
-                <Menu.Item icon={<IconPlayerPause size="0.9rem" stroke={1.5} />}>
-                  Pause subscription
-                </Menu.Item> */}
+                
                 <Menu.Item color="red" icon={<IconTrash size="0.9rem" stroke={1.5} />}>
                   アカウントの削除
                 </Menu.Item>
@@ -191,7 +189,7 @@ const HeaderAction = ({ tabs }: HeaderActionProps) => {
             </Menu>
           </Group>
         </Container>
-        <Container>
+        <Container className='flex justify-center'>
           <Tabs
             defaultValue="Home"
             variant="outline"
@@ -201,7 +199,7 @@ const HeaderAction = ({ tabs }: HeaderActionProps) => {
               tab: classes.tab,
             }}
           >
-            <Tabs.List>{items}</Tabs.List>
+            <Tabs.List className='mx-5'>{items}</Tabs.List>
           </Tabs>
         </Container>
       </div>

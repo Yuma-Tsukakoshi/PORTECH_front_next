@@ -13,7 +13,7 @@ const tabs = [
   },
   {
     link: 'portfolio',
-    label: 'MyBlog',
+    label: 'MyPage',
   },
   {
     link: 'tech',

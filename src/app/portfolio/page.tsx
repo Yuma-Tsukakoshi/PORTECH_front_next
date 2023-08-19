@@ -9,7 +9,8 @@ export default function Home() {
       <UserInfoIcons />
       <GridSkillsSection />
       <GridIntroduceSection />  
-      <ArticleCard />
+      {/* 以下に自分が投稿した記事が一覧で出るようにする */}
+      {/* <ArticleCard /> */}
     </main>
   )
 }

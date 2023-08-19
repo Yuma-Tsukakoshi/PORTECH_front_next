@@ -60,6 +60,9 @@ function Feature({ icon: Icon, title, description, className, ...others }: Featu
   );
 }
 
+//propsでログインユーザーのものを表示する
+// 他に、ログイン以外の人は別のページにする あくまでこのページにはログインユーザーのみ
+
 const usergoal = [
     {
     icon: IconCrown,

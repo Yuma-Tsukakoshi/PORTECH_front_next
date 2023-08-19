@@ -11,7 +11,6 @@ import { Grid, Container } from '@mantine/core';
 export function GridSkillsSection() {
 
   const [skills,setSkills] = useState([]);
-  // const [images,setImages] = useState([]); 
   const url = "http://localhost/api/skill";
 
   useEffect(()=>{
@@ -35,20 +34,19 @@ export function GridSkillsSection() {
           })} className="rounded-xl w-1/2 font-bold transform translate-x-1/2 drop-shadow-lg my-5 mb-10">
           スキル
       </Center>
-      <Grid className="gap-1 flex  justify-between">
+      <Grid className="gap-2 flex justify-evenly">
           {/* ゆくゆくはプロフィールから自分が選んだものだけ（idとかでstate維持） */}
           {skills.slice(0,14).map((skill : Skill)=>{
             return (
-              <Grid.Col xs={1.5} className="bg-slate-100 py-3 rounded-2xl relative drop-shadow-lg duration-300 hover:transform hover:duration-300 hover:-translate-y-5 hover:cursor-pointer">
-                <div key={skill.id} className="flex justify-center">
-                  {/* <Image 
-                    src={skill.image} 
+              <Grid.Col key={skill.id}  xs={1.3} className="bg-slate-100 py-3 rounded-2xl relative drop-shadow-lg duration-300 hover:transform hover:duration-300 hover:-translate-y-5 hover:cursor-pointer">
+                <div  className="flex justify-center">
+                  <Image 
+                    src= {`/${skill.path}.png`} 
                     alt={skill.path} 
                     objectFit="cover" 
-                    width={500} 
-                    height={500} 
-                  /> */}
-                  <img src= { skill.image } alt="" className="w-12 object-cover"/>
+                    width={200} 
+                    height={200} 
+                  />
                   <p className="font-bold text-center text-xs absolute bottom-0 mt-2">{skill.name}</p>
                 </div>
               </Grid.Col>

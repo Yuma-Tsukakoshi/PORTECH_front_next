@@ -96,14 +96,6 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-// interface HeaderTabsProps {
-//   // user: { name: string; image: string };
-//   tabs: {
-//     label: string;
-//     link: string;
-//   }[];
-// }
-
 type HeaderActionProps = {
   tabs: {
     label: string;

@@ -21,7 +21,7 @@ interface UserInfoIconsProps {
 export function UserInfoIcons({ avatar, name, title}: UserInfoIconsProps) {
   const { classes } = useStyles();
   return (
-    <Container my="md" className="bg-white p-8 pt-2 rounded-2xl">
+    <Container my="md" className="bg-white p-8 pt-2 rounded-2xl drop-shadow-lg">
         <Center className='mt-3 gap-10'>
           <Avatar src={avatar} size={94} radius="md"/>
           <Stack>

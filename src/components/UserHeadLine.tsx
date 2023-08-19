@@ -16,8 +16,6 @@ interface UserInfoIconsProps {
   avatar: string;
   name: string;
   title: string;
-  phone: string;
-  email: string;
 }
 
 export function UserInfoIcons({ avatar, name, title}: UserInfoIconsProps) {

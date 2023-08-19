@@ -1,7 +1,7 @@
 "use client";
 
 import { createStyles, Text, SimpleGrid, Container, rem } from '@mantine/core';
-import { IconTruck, IconCertificate, IconCoin } from '@tabler/icons-react';
+import { IconMedal2, IconCertificate, IconCrown } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   feature: {
@@ -62,23 +62,23 @@ function Feature({ icon: Icon, title, description, className, ...others }: Featu
 
 const usergoal = [
     {
-    icon: IconCoin,
-    title: 'Very Affordable Pricing',
+    icon: IconCrown,
+    title: '今後の目標 【 展望 】',
     description:
       'Thought to have gone extinct, Relicanth was given a name that is a variation of the name of the person who discovered.',
   },
 ]
 
-const mockdata = [
+const identity = [
   {
-    icon: IconTruck,
-    title: 'Free Worldwide shipping',
+    icon: IconMedal2,
+    title: '活かしていきたいこと【 強み 】',
     description:
       'As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity.',
   },
   {
     icon: IconCertificate,
-    title: 'Best Quality Product',
+    title: '克服したいこと【 弱み 】',
     description:
       'Slakoth’s heart beats just once a minute. Whatever happens, it is content to loaf around motionless.',
   },
@@ -86,7 +86,7 @@ const mockdata = [
 
 export function GridIntroduceSection() {
   const goal = usergoal.map((item) => <Feature {...item} key={item.title} />);
-  const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
+  const items = identity.map((item) => <Feature {...item} key={item.title} />);
 
   return (
     <Container mt={30} mb={30} size="lg">

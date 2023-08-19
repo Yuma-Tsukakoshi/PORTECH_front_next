@@ -1,7 +1,7 @@
 "use client";
 
 import { createStyles, Container, Group, ActionIcon, rem } from '@mantine/core';
-import { IconBrandYoutubeFilled, IconBrandInstagram  } from '@tabler/icons-react';
+import { IconBrandInstagram  } from '@tabler/icons-react';
 import { MantineLogo , GithubIcon} from '@mantine/ds';
 import Link from 'next/link';
 
@@ -40,11 +40,6 @@ const FooterLink = () => {
       <Container className={classes.inner}>
         <MantineLogo size={28} />
         <Group spacing={0} className={classes.links} position="right" noWrap>
-          <ActionIcon size="lg">
-            <Link href="https://www.youtube.com/" target= "_blank">
-              <IconBrandYoutubeFilled size="1.05rem" stroke={1.5} />
-            </Link>
-          </ActionIcon>
           <ActionIcon size="lg">
             <GithubIcon size={20} />
           </ActionIcon>

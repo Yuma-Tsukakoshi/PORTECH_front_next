@@ -1,28 +1,26 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import HeaderAction from '../components/layouts/HeaderAction';
+import HeaderAction from '@/components/layouts/HeaderAction';
+import FooterLinks from '@/components/layouts/FooterLink';
 
 const inter = Inter({ subsets: ['latin'] })
 
 const tabs = [
   {
-    link: 'home',
+    link: '/',
     label: 'HOME',
   },
   {
     link: 'portfolio',
-    label: 'Portfolio',
+    label: 'MyPage',
   },
   {
-    link: 'tips',
-    label: 'Tips',
-  },
-  {
-    link: 'techfinder',
-    label: 'TechFinder',
+    link: 'tech',
+    label: 'TechBlog',
   },
 ];
+
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -39,6 +37,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <HeaderAction {...{ tabs }} />
         {children}
+        <FooterLinks />
       </body>
     </html>
   )

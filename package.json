@@ -14,11 +14,13 @@
     "@mantine/dates": "^6.0.19",
     "@mantine/ds": "^6.0.19",
     "@mantine/hooks": "^6.0.19",
+    "@notionhq/client": "^2.2.11",
     "@tabler/icons-react": "^2.30.0",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "axios": "^1.4.0",
     "dayjs": "^1.11.9",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.13",
@@ -29,5 +31,9 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-unused-imports": "^3.0.0"
   }
 }

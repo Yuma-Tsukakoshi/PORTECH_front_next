@@ -2,9 +2,7 @@
 
 import { Container, createStyles, Avatar, Text, Group, ActionIcon, Center, Stack} from '@mantine/core';
 import { GithubIcon } from '@mantine/ds';
-import Link from 'next/link';
-import Image  from 'next/image';
-
+import Image from 'next/image';
 
 const useStyles = createStyles((theme) => ({
   icon: {
@@ -42,6 +40,5 @@ export function UserInfoIcons({ avatar, name, title}: UserInfoIconsProps) {
           </Stack>
         </Center>
     </Container>
-
   );
 }

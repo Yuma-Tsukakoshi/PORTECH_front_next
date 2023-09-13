@@ -25,7 +25,7 @@ export function UserInfoIcons({ avatar, name, title}: UserInfoIconsProps) {
           <Stack>
             <Text fz="xs" tt="uppercase" fw={700} c="dimmed">
               {/* {title} */}
-              {"POSSE テック局 日本計画党"}
+              {"POSSE① テック局 日本計画党"}
             </Text>
             <Group>
               <Text fz="lg" fw={500} className="font-bold text-xl tracking-wider">
